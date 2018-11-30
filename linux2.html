@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="keywords" content="MySQL" /> 
+   
+  <title>Little Grass</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <!-- **** Layout Stylesheet **** -->
+  <link rel="stylesheet" type="text/css" href="type.css" charset="utf-8"/>
+  <link rel="shortcut icon" href="img/grass.jpg" />
+</head>
+
+<body>
+<div id="container">
+<!-- HEADER and MENU //-->
+<div id="header">
+  <img src="/img/linux.jpg" class="fltright" height=100 alt="Linux"/>
+  <h1>Linux</h1>
+  <p>Timed Task, crontab</p> 
+</div>
+
+<div id="menu">	
+  <a href="share.html">Back</a>
+</div> 	
+
+<div id="contentwide">
+
+<b>The crondTab is the most useful function in Linux.</b>
+<br>
+<h4>Why do we need timed tasks?</h4>
+<li>Server: 7*24 hours of service is the basic feature of the website
+<li>Data: Backing up data at least once a day, incremental backup per minute(bin-log real time backup).
+Backup consumes machine resources, so regular backup in the middle of the night.
+<li>Script: Many people use it to run Python 'scrapy' module or other script files.
+<br>
+<h4>Linux Timing Tasks:</h4>
+<li>The task of regular execution of the system itself. Check with "ll /etc/|grep cron".
+<li>Tasks executed by users
+<br>
+<h4>Timed Task Classification:</h4>
+<li>at, A scheduling task that is suitable for executing only one task
+<li>anacron, Boot execution
+<li>crond, Default for crond services(every minute)
+<br>"Crontab" is the user's command to set the timing task
+<br>crontab -l: Check
+<br>crontab -e: Edit
+<br>
+
+<h4>User Timed Task:</h4>
+It is separated into 6 elements
+<br>* * * * * *
+<br>minute hour day month week command
+<br>Examples:
+<br>0 17-19 * * * cmd -> execute at 17, 18 and 19 oclock
+<br>*/5 * * * * cmd -> execute every 5 minutes
+<br>cmd : The command or script you want to execute
+<br>*  : Any time, equals to "every"
+<br>-  : A time range like 17-19
+<br>,  : Discrete time 17,18,19
+<br>/n : Each n unit time */5
+<br>
+<h4>View Execution:</h4>
+/etc/init.d/crond status
+<br>less /var/log/cron
+<br><br>Few more examples:
+<br>30 21 * * * /application/apache/bin/apachectl graceful
+<br>Restart Apache server every night at 9:30P.M..
+<br><br>10 1 * * * 6,0 /application/apache/bin/apachectl graceful
+<br>Restart Apache server every Saturday and Sunday at 1:10 A.M..
+
+<h4>Execute Script:</h4>
+Scripts need to excute as '.sh'
+<br>echo 'date +%F' > /test/sun.sh
+<br>sh /test/sun.sh 
+<br>echo '00 09,14 * * 6,7 /bin/sh /test/sun.sh' >> /var/spool/cron/root
+<br>Note: If the command more than two lines, make scripts execute.
+ 
+<a href="#container">
+<img border="0" alt="Back To Top" src="img/rocket.jpg" height="50" class="fltright">
+</a> 
+<div id="footer">
+<p>Copyright 2017 Siyuan Cao</p>
+</div>
+
+
+</div>
+</body>
+</html>

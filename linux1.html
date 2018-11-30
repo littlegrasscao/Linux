@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="keywords" content="MySQL" /> 
+   
+  <title>Little Grass</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+  <!-- **** Layout Stylesheet **** -->
+  <link rel="stylesheet" type="text/css" href="type.css" charset="utf-8"/>
+  <link rel="shortcut icon" href="img/grass.jpg" />
+</head>
+
+<body>
+<div id="container">
+<!-- HEADER and MENU //-->
+<div id="header">
+  <img src="/img/linux.jpg" class="fltright" height=100 alt="Linux"/>
+  <h1>Linux</h1>
+  <p>Linux Commands and Regular Expression</p> 
+</div>
+
+<div id="menu">	
+  <a href="share.html">Back</a>
+</div> 	
+
+<div id="contentwide">
+Liunx is a very powerful operating system (OS). Many programming softwares are built on Linux.
+<br>Learning Linux commands is the first step to get familiar with the OS.
+<br>
+<br>
+<table border = "3" bordercolor="black">  
+    <tr>  
+    <td colspan="6"><center><h1>Linux Commands</h1></center></td>  
+            </tr>  
+            <tr align="center">  
+                <td></td>  
+                <td>Command</td>  
+                <td>Meaning</td>  
+                <td>Add-on Command</td>  
+                <td>Add-on Meaning</td> 
+				<td>Example</td>
+            </tr>  
+            <tr>
+				<td rowspan =2>ssh</td>
+                <td>sz</td>  
+                <td>download files from Linux to Host computer</td>
+				<td>-y</td>
+				<td>replace the overlaps </td>
+            </tr>  
+            <tr>  
+                <td>rz</td>  
+                <td>upload files from Host computer to Linux</td>  
+            </tr>  
+			<tr>  
+                <td rowspan =14>General</td>  
+                <td>cd</td>  
+                <td>Entry directory</td>   
+            </tr>  
+            <tr>  
+                <td>ls</td>  
+                <td>Show files in the directory </td>
+            </tr>  
+			<tr>  
+                <td>pwd</td>  
+                <td>Show current directory</td>
+            </tr>
+			<tr>  
+                <td>vi/vim</td>  
+                <td>Edit</td>
+            </tr>			
+			<tr>  
+                <td>echo</td>  
+                <td>Print output</td>
+            </tr>			
+			<tr>  
+                <td>cat</td>  
+                <td>Print file</td>
+				<td></td>
+				<td></td>
+				<td>cat -n /etc/service|tail -1</td>
+            </tr>
+			<tr>  
+                <td>cp</td>  
+                <td>Copy</td>
+            </tr>
+			<tr>  
+                <td>rm</td>  
+                <td>Remove</td>
+				<td>-f</td>
+				<td>enforce delete</td>
+            </tr>
+			<tr>  
+                <td>mv</td>  
+                <td>Move a file or change filename</td>
+            </tr>
+			<tr>  
+                <td>mkdir</td>  
+                <td>Make a directory </td>
+            </tr>
+			<tr>  
+                <td>touch</td>  
+                <td>Create a document </td>
+            </tr>
+			<tr>  
+                <td>head</td>  
+                <td>Show head of output</td>
+				<td>-10</td>
+				<td>First 10 letter</td>
+            </tr>
+			<tr>  
+                <td>tail</td>  
+                <td>Show head of output</td>
+				<td>-10</td>
+				<td>Last 10 letter</td>				
+            </tr>
+			<tr>  
+                <td>cp</td>  
+                <td>Copy</td>
+            </tr>	
+
+           <tr>
+				<td rowspan =3>Filter</td>
+                <td>grep</td>  
+                <td>Commonly use</td>
+				<td>-v</td>
+            </tr>  
+            <tr>  
+                <td>sed</td>  
+                <td>Better for rows</td>  
+            </tr>
+             <tr>  
+                <td>awk</td>  
+                <td>Better for column</td>
+				<td></td><td></td>
+				<td>awk '{if(NR>10&&NR<40) print$0}' ett.txt</td>
+            </tr> 
+  
+			<tr>
+				<td rowspan =4>Search</td>
+                <td>find</td>  
+                <td>Search for content</td>
+				<td>-type; -name; -mtime</td><td></td><td>find / -type (f d) -name "" -mtime -10</td>
+            </tr>
+			<tr>
+                <td>locate</td>  
+                <td>= find -name</td>
+				<td></td><td></td><td>locate /etc/sh</td>
+            </tr>	
+			<tr>
+                <td>whereis</td>  
+                <td>Only search for programs</td>
+				<td></td><td></td><td>whereis grep</td>
+            </tr>			
+            <tr>  
+                <td>which</td>  
+                <td>Search for command path</td>
+				<td></td><td></td><td>which grep</td>
+            </tr>			
+
+			<tr>
+				<td rowspan =2>Install</td>
+                <td>yum</td>  
+                <td>Commonly use</td>
+				<td>install</td>
+				<td></td></td><td>yum install lrzsz -y</td>
+            </tr>  
+            <tr>  
+                <td>yum</td>  
+                <td>Commonly use</td>
+				<td>groupinstall</td>
+				<td></td></td><td>yum groupinstall "Dial-up Networking Support" -y</td>
+            </tr>
+			
+			<tr>
+				<td rowspan =9>Potential</td>
+                <td>alias</td>  
+                <td>Give command an alias</td>
+            </tr>  
+            <tr>  
+                <td>unalise</td>  
+                <td>Disabled alias</td>
+            </tr>	
+            <tr>  
+                <td>tree</td>  
+                <td>View the directory structure</td>
+            </tr>
+            <tr>  
+                <td>xargs</td>  
+                <td>After |</td>
+            </tr>
+            <tr>  
+                <td>seq</td>  
+                <td>sequence</td>
+            </tr>
+            <tr>  
+                <td>man</td>  
+                <td>View command help</td>
+            </tr>
+            <tr>  
+                <td>history</td>  
+                <td>View history code</td>
+            </tr>	
+            <tr>  
+                <td>cut</td>  
+                <td>Cut the required content</td>
+				<td>-c; -d; -f</td>
+				<td>character; break; field</td>
+				<td>cut -c 8-14,21- test.txt; cut -d" " -f4,7 test.txt</td>
+            </tr>	
+            <tr>  
+                <td>wc</td>  
+                <td>Count</td>
+				<td>-l</td>
+				<td>lines</td>
+            </tr>
+			<td rowspan =4>Tab</td>
+                <td>Ctrl+C</td>  
+                <td>Terminate current task</td>
+            </tr>  
+            <tr>  
+                <td>Ctrl+d</td>  
+                <td>Logoff</td>
+            </tr>	
+            <tr>  
+                <td>Ctrl+Shift+C</td>  
+                <td>Copy(used in SecureCRT)</td>
+            </tr>
+            <tr>  
+                <td>Ctrl+a</td>  
+                <td>Back to top</td>
+            </tr>			
+			</table> 			
+<br>
+<br>Regular Expression is a very convenient and commonly used programming language. 
+<br><br><table border = "3" bordercolor="black">  
+    <tr>  
+    <td colspan="6"><center><h1>Regular Expression</h1></center></td>  
+            </tr>  
+            <tr align="center">  
+                <td></td>  
+                <td>Letter</td>  
+                <td>Meaning</td>  
+				<td>Example</td>
+            </tr>  
+            <tr>
+				<td rowspan =10>Basic</td>
+                <td>^#</td>  
+                <td>Begin with #</td>
+				<td>^word</td>
+            </tr>  
+            <tr>  
+                <td>#$</td>  
+                <td>End with #</td>  
+				<td>word$</td>  
+            </tr> 
+            <tr>  
+                <td>.</td>  
+                <td>one letter</td>  
+            </tr> 
+            <tr>  
+                <td>\</td>  
+                <td>transition symbols </td>    
+            </tr> 
+            <tr>  
+                <td>*</td>  
+                <td>repeat 0 or many letters</td>    
+            </tr> 
+            <tr>  
+                <td>[]</td>  
+                <td>character set</td>  
+ 
+            </tr>
+            <tr>  
+                <td>[^#]</td>  
+                <td>No #</td>  
+				<td>[^word]</td>  
+            </tr>
+            <tr>  
+                <td>{n,m}</td>  
+                <td>repeat n to m times</td>  
+				<td>word{n,m}</td>  
+            </tr>  
+            <tr>  
+                <td>{n,}</td>  
+                <td>At least n times</td>  
+				<td>word{n,}</td>  
+            </tr>  
+            <tr>  
+                <td>{n}]</td>  
+                <td>n times</td>  
+				<td>word{n}</td>  
+            </tr>    				
+			            <tr>
+				<td rowspan =4>Expand</td>
+                <td>+</td>  
+                <td>repeat 1 or more letters</td>
+
+            </tr>  
+            <tr>  
+                <td>?</td>  
+                <td>repeat 0 or 1 letter</td>  
+            </tr>  
+            <tr>  
+                <td>|</td>  
+                <td>= or</td>  
+            </tr>  
+            <tr>  
+                <td>()</td>  
+                <td>character string</td>  
+            </tr> 
+</table> 
+
+
+
+<a href="#container">
+<img border="0" alt="Back To Top" src="img/rocket.jpg" height="50" class="fltright">
+</a> 
+<div id="footer">
+<p>Copyright 2017 Siyuan Cao</p>
+</div>
+
+
+</div>
+</body>
+</html>
